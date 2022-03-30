@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&family=Varela+Round&display=swap');
+body{
+    background-color: antiquewhite;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: black;
+    color: white;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+nav li{
+    padding: 0px 12px;
+}
+.brand img{
+    width:40px;
+    padding: 0 8px;
+    border-radius: 30%;
+}
+.brand{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+}
+.container{
+    min-height: 72vh;
+    background-color: black;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    margin: 23px auto;
+    width: 70vw;
+    padding: 34px;
+    border-radius: 12px;
+    background-image: url("bg.jpg");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.bottom{
+    position: sticky;
+    background-color: black;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 90px;
+    flex-direction: column;
+}
+.icons{
+    margin-top: 14px;
+}
+.icons i{
+    cursor: pointer;
+}
+#progressbar{
+    width: 80vw;
+    cursor: pointer;
+}
+.songitem{
+    display: flex;
+    background-color: white;
+    width: 100%;
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+}
+.songitemcontainer{
+    margin-top: 24px;
+}
+.songitem img{
+    width: 43 px;
+    margin: 0 23px;
+
+}
+.songitemplay{
+    padding-left: 10px;
+}
+.timestamp{
+    margin: 0 23px;
+    
+}
+.timestamp i{
+    cursor: pointer;
+}
+.songinfo{
+    position: absolute;
+    left: 10vw;
+    padding-top: 2%;
+}
+.songinfo img{
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
