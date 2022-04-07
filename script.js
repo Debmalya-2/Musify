@@ -21,6 +21,7 @@ let songs=[
 songitems.forEach((element, i)=>{
     element.getElementsByTagName("img")[0].src=songs[i].coverpath;
     element.getElementsByClassName("songname")[0].innerText=songs[i].songName;
+    // element.getElementsByClassName("timestamp")[0].innerText=songs[i].duration;
 })
 masterplay.addEventListener('click',()=>{
     if(audioElement.paused||audioElement.currentTime<=0)
@@ -66,13 +67,13 @@ Array.from(document.getElementsByClassName('songitemplay')).forEach((element)=>{
     })
 })
 document.getElementById('next').addEventListener('click', () => {
-    if (songindex >= 10) {
+    if (songindex >= 9) {
         songindex = 0;
     }
     else {
         songindex += 1;
     }
-    audioElement.src = `songs/${songindex}.mp3`;
+    audioElement.src = `songs/${songindex+1}.mp3`;
     mastersongname.innerText=songs[songindex].songName;
     audioElement.currentTime = 0;
     audioElement.play();
@@ -81,13 +82,13 @@ document.getElementById('next').addEventListener('click', () => {
     gif.style.opacity = 1;
 })
 document.getElementById('previous').addEventListener('click', () => {
-    if (songindex <=1) {
-        songindex = 10;
+    if (songindex <=0) {
+        songindex = 9;
     }
     else {
         songindex -= 1;
     }
-    audioElement.src = `songs/${songindex}.mp3`;
+    audioElement.src = `songs/${songindex+1}.mp3`;
     mastersongname.innerText=songs[songindex].songName;
     audioElement.currentTime = 0;
     audioElement.play();
